@@ -31,3 +31,4 @@ end
 Dir.mkdir("output") unless Dir.exists?("output")
 File.open("output/result.txt", "w") { |file| file.write(result) }
 puts "The result of #{operation} is #{result}"
+
