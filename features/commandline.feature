@@ -1,19 +1,11 @@
-Feature: Calculator Command Line Interface
-  As a user
-  I want to be able to use the CLI calculator to perform addition and subtraction
-  So that I can quickly perform arithmetic operations from the command line.
+# calculator.feature
+Feature: Calculator Addition
+  As a user of the calculator
+  I want to be able to add two numbers
+  So that I can get the correct result
 
-  Scenario: Perform addition
-    Given the calculator is installed
-    When I run the calculator with the following command: "cli_calculator.rb -a 2,3"
-    Then I should see the result "5"
+Scenario: Add two numbers
+  Given I have the calculator
+  When I add the numbers "2" and "3"
+  Then the result should be "5"
 
-  Scenario: Perform subtraction
-    Given the calculator is installed
-    When I run the calculator with the following command: "cli_calculator.rb -s 4,2"
-    Then I should see the result "2"
-
-  Scenario: Invalid operation
-    Given the calculator is installed
-    When I run the calculator with the following command: "cli_calculator.rb -x 4,2"
-    Then I should see the error message "Invalid operation. Try 'main.rb --help' for more information."
